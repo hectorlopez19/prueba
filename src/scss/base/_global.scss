@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: v.$mainFont;
+	overflow: hidden;
+}
+
+.main {
+	display: flex;
+	height: 100vh;
+}
+
+h2,
+h3,
+p {
+	color: v.$darkGray;
+}
+
+* {
+	margin: 0;
+}

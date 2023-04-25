@@ -1,0 +1,87 @@
+@use '../base/variables' as v;
+
+.mail-preview {
+	width: 320px;
+	height: 80px;
+	padding: 15px 15px 15px 15px;
+	font-size: 12px;
+	border-bottom: 1px solid #d9d7d7;
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+	cursor: pointer;
+}
+
+.indicators {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.active-indicator {
+	width: 3px;
+	height: 80px;
+	background-color: v.$accentColor;
+	position: relative;
+	right: 15px;
+	visibility: hidden;
+}
+
+.unread-indicator {
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background-color: v.$accentColor;
+	visibility: hidden;
+}
+
+.active {
+	visibility: visible;
+}
+
+.preview-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.mail-active {
+	background-color: v.$darkWhite;
+}
+
+.preview-sender-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.subject {
+	display: flex;
+}
+
+.preview-sender {
+	display: flex;
+	gap: 5px;
+	font-weight: bold;
+}
+
+.avatar {
+	width: 12px;
+	height: 12px;
+
+	img {
+		width: 100%;
+		aspect-ratio: 1/1;
+		object-fit: contain;
+	}
+}
+
+.preview-content,
+.date {
+	color: v.$gray;
+}
+
+.date {
+	margin: 0;
+	font-size: 10px;
+}

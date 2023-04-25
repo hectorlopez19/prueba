@@ -1,0 +1,49 @@
+@use '../base/variables' as v;
+
+.mail-list {
+	width: 320px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid v.$lightGray;
+	overflow: scroll;
+}
+
+.filters {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	gap: 20px;
+	border-bottom: 1px solid v.$gray;
+	padding: 15px;
+}
+
+.filter {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.filter-icon {
+	width: 14px;
+	height: 14px;
+
+	img {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		object-fit: contain;
+		filter: invert(12%) sepia(1%) saturate(757%) hue-rotate(329deg) brightness(97%) contrast(78%);
+	}
+}
+
+.filter-active {
+	color: v.$accentColor;
+	filter: invert(63%) sepia(31%) saturate(5721%) hue-rotate(189deg) brightness(90%) contrast(95%);
+}
+
+.mails {
+	display: flex;
+	flex-direction: column-reverse;
+}
